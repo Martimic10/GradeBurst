@@ -55,7 +55,7 @@ const solutions = [
   "Instant results — no waiting",
   "Fraction of the cost",
   "Screen cards before you submit",
-  "Make smarter buy/sell decisions",
+  "Know which cards are worth submitting",
 ];
 
 const faqs = [
@@ -205,17 +205,18 @@ const howItWorksSteps = [
     icon: TrendingUp,
     title: "Get Your Grade Estimate",
     description:
-      "Receive a PSA-style grade from 1–10 with full subgrade breakdown and a clear recommendation: Grade It, Sell Raw, or Hold.",
+      "Receive a PSA-style grade from 1–10 with a full subgrade breakdown — centering, corners, edges, and surface — plus the reasoning behind it.",
     mock: (
       <div className="w-full max-w-65 mx-auto space-y-3">
         <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-5 space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-end justify-between">
             <div>
               <p className="text-[9px] text-slate-400 uppercase tracking-widest">Est. PSA Grade</p>
               <p className="text-5xl font-bold text-cyan-500 leading-none mt-0.5">9</p>
             </div>
-            <div className="px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200">
-              <span className="text-[11px] font-bold text-emerald-600 uppercase tracking-wide">Grade It</span>
+            <div className="text-right">
+              <p className="text-[9px] text-slate-400 uppercase tracking-widest">Confidence</p>
+              <p className="text-xl font-bold text-slate-700 leading-none mt-0.5">87%</p>
             </div>
           </div>
           <div className="space-y-2 pt-1">
