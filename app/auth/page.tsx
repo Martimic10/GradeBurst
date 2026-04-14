@@ -83,7 +83,7 @@ export default function AuthPage() {
       {/* ── Left panel ── */}
       <div className="relative w-full md:w-1/2 bg-white flex flex-col px-10 py-10 md:px-16 lg:px-24">
 
-        {/* Back button */}
+        {/* Back button — pinned top */}
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 w-fit"
@@ -92,8 +92,11 @@ export default function AuthPage() {
           Back
         </Link>
 
+        {/* Centered content */}
+        <div className="flex-1 flex flex-col justify-center">
+
         {/* Logo */}
-        <div className="mt-10 mb-8">
+        <div className="mb-8">
           <div className="flex items-center gap-2.5 mb-6">
             <div className="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center">
               <Orbit className="w-4.5 h-4.5 text-white" />
@@ -128,7 +131,7 @@ export default function AuthPage() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4 flex-1">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
               type="email"
@@ -235,6 +238,8 @@ export default function AuthPage() {
           {" "}and{" "}
           <span className="underline cursor-pointer hover:text-slate-600 transition-colors">Privacy Policy</span>.
         </p>
+
+        </div>{/* end centered content */}
       </div>
 
       {/* ── Right panel — abstract fluid background ── */}
