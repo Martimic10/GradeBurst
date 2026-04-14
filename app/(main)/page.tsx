@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -408,59 +409,16 @@ export default function LandingPage() {
             initial={{ y: 28 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease }}
-            className="relative mt-16 mx-auto w-full max-w-3xl flex justify-center"
+            className="relative mt-16 mx-auto flex justify-center"
           >
-            <div className="relative w-[300px] sm:w-[340px] md:w-[380px] h-[720px] rounded-[3rem] border border-slate-300/30 bg-slate-100 shadow-[0_30px_90px_rgba(15,23,42,0.12)]">
-              <div className="absolute inset-x-0 top-4 flex justify-center">
-                <div className="h-1.5 w-28 rounded-full bg-slate-300/70" />
-              </div>
-
-              <div className="absolute inset-x-0 top-6 flex justify-between px-6 text-slate-500 text-[0.7rem]">
-                <span>9:41</span>
-                <span>100%</span>
-              </div>
-
-              <div className="absolute inset-x-4 top-16 bottom-6 rounded-[2.2rem] bg-slate-950 p-5 border border-slate-900/40 shadow-inner">
-                <div className="mb-6 flex items-center justify-between text-slate-300">
-                  <span className="text-sm font-medium">GradeBurst</span>
-                  <span className="text-sm">Live</span>
-                </div>
-                <div className="rounded-[2rem] bg-slate-900 p-5 text-white shadow-[0_15px_40px_rgba(15,23,42,0.35)]">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span>Card quality</span>
-                    <span>96%</span>
-                  </div>
-                  <div className="mt-4 rounded-3xl bg-slate-800 p-4">
-                    <div className="h-2 rounded-full bg-slate-700">
-                      <div className="h-2 w-5/6 rounded-full bg-cyan-500" />
-                    </div>
-                    <div className="mt-4 flex items-center justify-between text-sm text-slate-300">
-                      <span>Sharp edges</span>
-                      <span>Good</span>
-                    </div>
-                    <div className="mt-3 flex items-center justify-between text-sm text-slate-300">
-                      <span>Centering</span>
-                      <span>Great</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 space-y-4">
-                  <div className="rounded-3xl bg-slate-900/90 p-4 text-slate-200">
-                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Estimate</p>
-                    <p className="mt-2 text-3xl font-semibold">PSA 9</p>
-                  </div>
-                  <div className="rounded-3xl bg-slate-900/80 p-4 text-slate-200">
-                    <div className="flex items-center justify-between text-sm text-slate-400">
-                      <span>Confidence</span>
-                      <span>87%</span>
-                    </div>
-                    <div className="mt-3 h-2 rounded-full bg-slate-700">
-                      <div className="h-2 w-4/5 rounded-full bg-cyan-500" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/gradeburst-mockup-removebg-preview.png"
+              alt="GradeBurst app mockup"
+              width={520}
+              height={600}
+              className="w-full max-w-lg drop-shadow-2xl"
+              priority
+            />
           </motion.div>
         </div>
       </section>
